@@ -1,0 +1,100 @@
+.default {
+    flex-flow: row nowrap;
+}
+.reverse {
+    flex-flow: row-reverse nowrap;
+}
+
+.slip {
+transition: 0.3s;
+margin-bottom: 16px;
+padding: 8px;
+display: flex;
+justify-content: space-between;
+}
+
+.slip:hover {
+box-shadow: 0 8px 16px 0 var(--color-shadow);
+}
+
+.slipContainer {
+display: flex;
+width: 100%;
+}
+
+.slipBody {
+    position: relative;
+    margin: 0 0.5rem;
+    width: 100%;
+    background: var(--color-white);
+    color: var(--color-deepGrey);
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.4rem;
+    word-break : break-all;
+    text-align: right;
+}
+
+.slipInfo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3em;
+    padding: 0.2em 0 0 0;
+}
+
+.slipName {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.slipUsername,
+.slipDate {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    color: var(--color-blue);
+    font-weight: 300;
+}
+
+.slipUsername {
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.slipUsername:hover {
+    background: var(--color-yellow);
+}
+
+.slipDate {
+    color: var(--color-darkGrey);
+}
+
+.slipContent {
+    padding: 0.5rem 0.2rem 0.3rem 0.2rem;
+    font-weight: 300;
+}
+
+.slipAction {
+    width: 1rem;
+    height: 100%;
+    padding: 0.2em 0.5em;
+    position: absolute;
+    top: 0; left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slipActionBtn {
+    fill: var(--color-darkGrey);
+    color: var(--color-darkGrey);
+    transition: transform 300ms;
+    padding: 0.4rem 0;
+}
+
+.slipActionBtn :first-child{
+    width: 0.7rem;
+}
+
+.slipActionBtn:hover {
+    transform: scale(1.5);
+    color: var(--color-blue);
+}

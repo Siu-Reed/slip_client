@@ -1,0 +1,156 @@
+:root {
+    --color-white: #ffffff;
+    --color-black: #272727;
+    --color-blue: #9bd4cf;
+    --color-darkBlue: #808f8e;
+    --color-grey: #f6f6f6;
+    --color-darkGrey: #b5b5b5;
+    --color-deepGrey: #545454;
+    --color-red: #ffbce7;
+    --color-green: #7aa300;
+    --color-offWhite: #f6fefe;
+    --color-shadow: rgba(0, 0, 0, 0.2);
+    --size-avatar: 2.3rem;
+}
+
+@font-face {
+    font-family: 'Gmarket Sans TTF';
+    src: url('./css/fonts/GmarketSansTTFLight.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gmarket Sans TTF';
+    src: url('./css/fonts/GmarketSansTTFMedium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gmarket Sans TTF';
+    src: url('./css/fonts/subset-GmarketSansTTFBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-darkBlue);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+code {
+    font-family: 'Gmarket Sans TTF';
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+p, a, span, pre, input, button, label, h1, h2, h3, h4, h5, h6  {
+    font-family: 'Gmarket Sans TTF';
+    transform: skew(-0.1deg);
+}
+
+button {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.app {
+    width: 100vw;
+    max-width: 500px;
+    height: 100vh;
+    background-color: var(--color-offWhite);
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.banner-red {
+    background-color: var(--color-red);
+}
+
+.banner-green {
+    background-color: var(--color-green);
+}
+
+.slips {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 1rem;
+    list-style: none;
+    /* Firefox */
+    scrollbar-width: 0.4rem;
+    scrollbar-color: var(--color-darkGrey);
+    scrollbar-face-color: var(--color-grey);
+}
+
+.slips::-webkit-scrollbar {
+/* Safari and Chrome */
+background-color: var(--color-grey);
+width: 0.4rem;
+}
+
+.slips::-webkit-scrollbar-thumb {
+/* Safari and Chrome */
+background-color: var(--color-darkGrey);
+}
+
+.slips-empty {
+font-size: 2rem;
+font-weight: bold;
+color: var(--color-grey);
+text-align: center;
+}
+
+.slip-form {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-grey);
+}
+
+.slip-input {
+    width: 100%;
+    margin-right: 4px;
+    padding: 0.5rem;
+}
+
+.edit-slip-form-action {
+float: right;
+margin-top: 4px;
+}
+
+.form-btn-update,
+.form-btn-cancel {
+font-size: 0.8rem;
+background: var(--color-blue);
+font-weight: bold;
+padding: 0.4rem;
+}
+.form-btn-cancel {
+margin-left: 8px;
+background: var(--color-red);
+}

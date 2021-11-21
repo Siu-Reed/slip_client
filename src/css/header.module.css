@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-darkBlue);
+    padding: 1em;
+}
+
+.left {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.7em;
+}
+
+.logoImg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--color-blue);
+}
+
+.logoName {
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding-top: 0.1em;
+    color: var(--color-blue);
+}
+
+.logoUser {
+font-size: 0.8rem;
+color: var(--color-blue);
+padding-top: 8px;
+}
+
+.menuItem {
+    font-weight: 300;
+    color: var(--color-darkBlue);
+}
+.menuItem:hover {
+    font-weight: 500;
+}
