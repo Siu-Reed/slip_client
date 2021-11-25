@@ -6,20 +6,27 @@
 }
 
 .slip {
-transition: 0.3s;
-margin-bottom: 16px;
-padding: 8px;
-display: flex;
-justify-content: space-between;
+    transition: 0.3s;
+    margin-bottom: 1rem;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .slip:hover {
-box-shadow: 0 8px 16px 0 var(--color-shadow);
+    transform: scale(1.05);
 }
 
 .slipContainer {
-display: flex;
-width: 100%;
+    display: flex;
+    width: 100%;
+}
+
+.avatarContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 0.5em;
 }
 
 .slipBody {
@@ -28,29 +35,37 @@ width: 100%;
     width: 100%;
     background: var(--color-white);
     color: var(--color-deepGrey);
-    padding: 0.5rem 0.7rem;
+    padding: 0.8rem;
     border-radius: 0.4rem;
     word-break : break-all;
     text-align: right;
+    box-shadow: 3px 3px 5px rgba(0, 37, 55, 0.03);
+
+    display: flex;
+    flex-flow: column;
 }
 
 .slipInfo {
     display: flex;
     align-items: baseline;
-    gap: 0.3em;
-    padding: 0.2em 0 0 0;
+    gap: 1em;
+}
+
+.slipUsername {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--color-blue);
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 }
 
 .slipName {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 500;
 }
-
-.slipUsername,
 .slipDate {
-    font-size: 0.7rem;
-    margin-left: 0.5rem;
-    color: var(--color-blue);
+    font-size: 0.6rem;
     font-weight: 300;
 }
 
@@ -68,14 +83,16 @@ width: 100%;
 }
 
 .slipContent {
-    padding: 0.5rem 0.2rem 0.3rem 0.2rem;
+    padding: 0.8em 0.2em 0 0;
+    font-size: 0.9rem;
     font-weight: 300;
+    width: calc(100% - 2rem);
+    align-self: end;
 }
 
 .slipAction {
-    width: 1rem;
+    width: 2rem;
     height: 100%;
-    padding: 0.2em 0.5em;
     position: absolute;
     top: 0; left: 0;
     display: flex;
@@ -88,6 +105,7 @@ width: 100%;
     color: var(--color-darkGrey);
     transition: transform 300ms;
     padding: 0.4rem 0;
+    opacity: 0.8;
 }
 
 .slipActionBtn :first-child{

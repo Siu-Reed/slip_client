@@ -14,16 +14,18 @@ const slipCard = memo(
     return (
         <li className={`${styles.slip} ${ownerFlow}`}>
             <section className={`${styles.slipContainer} ${ownerFlow}`}>
-                <Avatar url={url} name={name} />
+                <div className={styles.avatarContainer}>
+                    <Avatar url={url} name={name} />
+                    <span
+                        className={styles.slipUsername}
+                        onClick={() => onUsernameClick(slip)}
+                    >
+                        @{username}
+                    </span>
+                </div>
                 <div className={styles.slipBody}>
                     <div className={`${styles.slipInfo} ${ownerFlow}`}>
                         <span className={styles.slipName}>{name}</span>
-                        <span
-                            className={styles.slipUsername}
-                            onClick={() => onUsernameClick(slip)}
-                        >
-                            @{username}
-                        </span>
                         <span className={styles.slipDate}> · {parseDate(createdAt)}</span>
                     </div>
                     <p className={styles.slipContent}>{text}</p>

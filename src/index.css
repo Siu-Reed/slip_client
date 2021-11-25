@@ -10,7 +10,7 @@
     --color-green: #7aa300;
     --color-offWhite: #f6fefe;
     --color-shadow: rgba(0, 0, 0, 0.2);
-    --size-avatar: 2.3rem;
+    --size-avatar: 2.5rem;
 }
 
 @font-face {
@@ -79,10 +79,10 @@ button {
 }
 
 .banner {
-    margin: 0.5rem;
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 500;
+    opacity: 0.7;
 }
 
 .banner-red {
@@ -108,9 +108,9 @@ button {
 }
 
 .slips::-webkit-scrollbar {
-/* Safari and Chrome */
-background-color: var(--color-grey);
-width: 0.4rem;
+    /* Safari and Chrome */
+    background-color: var(--color-grey);
+    width: 0.4rem;
 }
 
 .slips::-webkit-scrollbar-thumb {
@@ -134,23 +134,65 @@ text-align: center;
 
 .slip-input {
     width: 100%;
-    margin-right: 4px;
     padding: 0.5rem;
+}
+.form-btn {
+    border-radius: 0 5px 5px 0;
+    background: var(--color-blue);
+    color: var(--color-white);
 }
 
 .edit-slip-form-action {
-float: right;
-margin-top: 4px;
+    float: right;
+    margin-top: 0.3rem;
 }
 
 .form-btn-update,
 .form-btn-cancel {
-font-size: 0.8rem;
-background: var(--color-blue);
-font-weight: bold;
-padding: 0.4rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    background: var(--color-blue);
+    font-weight: 500;
+    padding: 0.4rem;
+    color: var(--color-deepGrey);;
 }
 .form-btn-cancel {
 margin-left: 8px;
 background: var(--color-red);
+}
+
+@media (min-width: 501px) {    
+    body {
+        background: linear-gradient(163deg, #acf3e1, #ffffff, #d7edf3, #ffffff);
+        background-size: 800% 800%;
+    
+        -webkit-animation: AnimationName 19s ease infinite;
+        -moz-animation: AnimationName 19s ease infinite;
+        animation: AnimationName 19s ease infinite;
+    }
+    
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 24%}
+        50%{background-position:100% 77%}
+        100%{background-position:0% 24%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 24%}
+        50%{background-position:100% 77%}
+        100%{background-position:0% 24%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 24%}
+        50%{background-position:100% 77%}
+        100%{background-position:0% 24%}
+    }
+    .app {
+        box-shadow: 0 0 0.5rem #00000020;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
 }

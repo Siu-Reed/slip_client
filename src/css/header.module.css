@@ -38,13 +38,45 @@
 .logoUser {
 font-size: 0.8rem;
 color: var(--color-blue);
-padding-top: 8px;
+padding-top: 0.5rem;
 }
 
 .menuItem {
+    font-size: 0.9rem;
     font-weight: 300;
     color: var(--color-darkBlue);
 }
+.menuItem::before {
+    content: "";
+    display: block;
+    width: 1.3em;
+    height: 0.4em;
+    border-top: 1px solid var(--color-darkGrey);
+}
+
 .menuItem:hover {
     font-weight: 500;
+}
+
+@media (max-width: 400px) {
+    .menuItem {
+        font-size: 0.8rem;
+    }
+    .logoImg {
+        width: 2.2rem;
+        height: 2.2rem;
+        fill: var(--color-blue);
+    }
+    .logoName {
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding-top: 0.1em;
+        color: var(--color-blue);
+    }
+}
+
+@media (max-width: 400px) {
+    .menuItem {
+        font-size: 0.7rem;
+    }
 }

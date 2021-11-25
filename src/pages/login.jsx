@@ -85,14 +85,6 @@ return (
                     required
                 />
                 <input
-                    name='url'
-                    type='url'
-                    placeholder='Profile Image URL'
-                    value={url}
-                    onChange={onChange}
-                    className={styles.formInput}
-                />
-                <input
                     name='email'
                     type='email'
                     placeholder='Email'
@@ -100,6 +92,14 @@ return (
                     onChange={onChange}
                     className={styles.formInput}
                     required
+                />
+                <input
+                    name='url'
+                    type='url'
+                    placeholder='Profile Image URL (optional)'
+                    value={url}
+                    onChange={onChange}
+                    className={styles.formInput}
                 />
                 </>
             )}
