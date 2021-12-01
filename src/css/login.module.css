@@ -62,11 +62,11 @@
 }
 
 .formBtnSmall {
-font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 .authFormBtn {
-margin: 16px;
+    margin: 16px;
 }
 
 .formInput:focus {
